@@ -1,0 +1,30 @@
+<div class="map-page">
+  <section class="header">
+    <h1 class="title">IP Address Tracker</h1>
+    <app-search-form (submitEvent)="setSearchTerm($event)"></app-search-form>
+
+    <div class="ip-geolocation-div" *ngIf="apiLoaded">
+      <div class="data-column">
+        <p class="label">IP ADDRESS</p>
+        <p class="info">{{ ipGeolocation?.ip }}</p>
+      </div>
+      <div class="data-column">
+        <p class="label">LOCATION</p>
+        <p class="info">
+          {{ ipGeolocation?.location.city }},
+          {{ ipGeolocation?.location.region }}
+          {{ ipGeolocation?.location.postalCode }}
+        </p>
+      </div>
+      <div class="data-column">
+        <p class="label">TIMEZONE</p>
+        <p class="info">UTC {{ ipGeolocation?.location.timezone }}</p>
+      </div>
+      <div class="last data-column">
+        <p class="label">ISP</p>
+        <p class="info">{{ ipGeolocation?.isp }}</p>
+      </div>
+    </div>
+  </section>
+  <div id="mapid"></div>
+</div>

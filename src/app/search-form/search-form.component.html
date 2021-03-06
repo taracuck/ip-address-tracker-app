@@ -1,0 +1,19 @@
+<form
+  #searchForm="ngForm"
+  (ngSubmit)="emitSubmitEvent(searchForm)"
+  class="form"
+>
+  <div class="input-bar">
+    <input
+      class="input"
+      type="text"
+      name="searchTerm"
+      id="searchTerm"
+      placeholder="Search for any IP address or domain"
+      ngModel
+    />
+    <button class="button">
+      <img src="/assets/icon-arrow.svg" alt="Submit Button" />
+    </button>
+  </div>
+</form>

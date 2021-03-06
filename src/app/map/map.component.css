@@ -1,0 +1,90 @@
+.map-page {
+  height: 100vh;
+  background-image: url("/assets/pattern-bg.png");
+  background-color: black;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.header {
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+#mapid {
+  height: 66vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.ip-geolocation-div {
+  width: 100%;
+  background-color: white;
+  border-radius: 16px;
+  text-align: center;
+  padding-bottom: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  color: hsl(0, 0%, 59%);
+  font-size: 10px;
+  padding-top: 20px;
+}
+
+.info {
+  font-size: 18px;
+  font-weight: 500;
+  color: hsl(0, 0%, 17%);
+  margin-top: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .map-page {
+    padding: 40px;
+  }
+  .ip-geolocation-div {
+    width: 75%;
+    flex-direction: row;
+    margin: auto;
+    padding: 20px 0px;
+  }
+  .data-column {
+    text-align: left;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-right: 1px solid hsl(0, 0%, 59%);
+  }
+  .last {
+    border: none !important;
+  }
+  .label {
+    padding: 0;
+    font-size: 14px;
+  }
+  .info {
+    font-size: 24px;
+  }
+  .title {
+    margin-bottom: 24px;
+  }
+}
